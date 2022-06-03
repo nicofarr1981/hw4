@@ -9,6 +9,9 @@
         <h3><%= post["title"] %></h3>
         <h4><%= post["posted_on"] %></h4>
         <p><%= post["description"] %></p>
+        <% if post.image.attached %>
+          <p><%= url_for(post.image) %></p>
+        <% end %>
       </div>
     <% end %>
   <% end %>
